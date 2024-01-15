@@ -11,7 +11,7 @@ def check() -> None:
             'username': username,
         }
 
-        session = nigga.post(
+        response = session.post(
             'https://discord.com/api/v9/unique-username/username-attempt-unauthed',
             json=json_data,
             proxy=f"http://{proxy}"
