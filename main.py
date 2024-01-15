@@ -1,5 +1,5 @@
 import tls_client, string, random, colorama, threading
-nigga = tls_client.Session(
+session = tls_client.Session(
                     client_identifier="okhttp4_android_9",
                     random_tls_extension_order=True
                 )
@@ -11,7 +11,7 @@ def check() -> None:
             'username': username,
         }
 
-        response = nigga.post(
+        session = nigga.post(
             'https://discord.com/api/v9/unique-username/username-attempt-unauthed',
             json=json_data,
             proxy=f"http://{proxy}"
